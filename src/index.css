@@ -1,26 +1,81 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: montserrat, sans-serif;
-}
-
-input, button {
-    appearance: none;
-    background: none;
-    border: none;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat, sans-serif;
 }
 
 .App {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #53565A;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 form {
-    display: block;
-    position: relative;
+  width: 300px;
+  background: #ffffff;
+  box-shadow: 3px -5px 35px rgba(205, 205, 212, 0.8);
+  position: relative;
+  display: inline-block;
+  padding: 30px;
+}
+
+input,
+label {
+  margin-bottom: 20px;
+  margin-right: 0.75rem;
+}
+
+.log-in {
+  background: #377dff;
+  border-radius: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 0.75rem;
+}
+
+.custom-input,
+.log-in,
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.form-group input:focus + .underline {
+  width: 100%;
+}
+
+.form-group .underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  background-color: #ff8203;
+  transition: 0.5s;
+}
+
+input:focus,
+.userName {
+  color: #ff8203;
+}
+
+.log-in:hover,
+button:hover {
+  color: #ff8203;
+}
+.log-in,
+button {
+  margin-top: 10px;
+  padding: 2px;
+  border: 0.5px solid black;
+}
+
+.error {
+  color: red;
 }
